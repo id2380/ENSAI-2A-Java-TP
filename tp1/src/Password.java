@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
 public class Password {
     /**
      * Hashes the provided password using the SHA-256 algorithm.
