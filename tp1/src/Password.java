@@ -89,7 +89,7 @@ public class Password {
             if (Character.isDigit(c)){
                 contientUnDigit = true;
             }
-            // si ce caractère n'est pas un espace
+            // si ce caractère est un espace
             if (Character.isWhitespace(c)){
                 estUnEspace = true;
             }
@@ -112,9 +112,13 @@ public class Password {
      */
     public static HashMap<String, Boolean> checkPasswordsList(ArrayList<String> passwords) {
 
-        // Code here7
+        HashMap<String, Boolean> result = new HashMap<>();
 
-        return null;
+        for(String password : passwords){
+                result.put(password, isStrongPassword(password))
+        }
+
+        return result;
     }
 
     /**
@@ -131,9 +135,42 @@ public class Password {
      */
     public static String generatePassword(int nbCar) {
 
-        // Code here
+         if (nbCar < 4) {
+            throw new IllegalArgumentException(
+                    "Password length must be at least 4 to include all required character types.");
+        }
 
-        return null;
+        String upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lowerCase = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String specialChars = "!@#$%^&*()-_=+";
+
+        SecureRandom random = new SecureRandom();
+        List<Character> password = new ArrayList<>();
+
+        // Ensure at least one character from each category
+        password.add(upperCase.charAt(random.nextInt(upperCase.length())));
+        password.add(lowerCase.charAt(random.nextInt(lowerCase.length())));
+        password.add(digits.charAt(random.nextInt(digits.length())));
+        password.add(specialChars.charAt(random.nextInt(specialChars.length())));
+
+        // Fill remaining characters randomly from all categories
+        String allChars = upperCase + lowerCase + digits + specialChars;
+        for (int i = 4; i < nbCar; i++) {
+            password.add(allChars.charAt(random.nextInt(allChars.length())));
+        }
+
+        // Shuffle to avoid predictable order
+        Collections.shuffle(password);
+
+        // Convert list to string
+        StringBuilder passwordStr = new StringBuilder();
+        for (char c : password) {
+            passwordStr.append(c);
+        }
+
+        return passwordStr.toString();
+
     }
 
     public static void main(String[] args) {
