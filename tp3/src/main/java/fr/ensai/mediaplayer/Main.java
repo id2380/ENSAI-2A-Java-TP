@@ -7,10 +7,10 @@ public class Main {
          // Create artist and song
         Artist jeanFerrat = new Artist("Jean", "Ferrat", "Française");
         Song laMontage = new Song(
-            "La Montagne", 
-            jeanFerrat, 
-            1965, 
-            120, 
+            "La Montagne", // title
+            jeanFerrat, // singer
+            1965, // year
+            120, // duration
             "Ils quittent un à un le pays
             Pour s'en aller gagner leur vie, loin de la terre où ils sont nés
             Depuis longtemps ils en rêvaient
@@ -18,9 +18,9 @@ public class Main {
             Les vieux, ça n'était pas original
             Quand ils s'essuyaient machinal, d'un revers de manche les lèvres
             Mais ils savaient tous à propos
-            Tuer la caille ou le perdreau et manger la tomme de chèvre", 
-            jeanFerrat, 
-            jeanFerrat);
+            Tuer la caille ou le perdreau et manger la tomme de chèvre", //lyrics
+            jeanFerrat, // author
+            jeanFerrat); // composer
 
         // Play the song
         laMontage.play();
