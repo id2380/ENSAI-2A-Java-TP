@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 /**
  * Represents a podcast with essential attributes.
  */
-public class Podcast extends Audio {
+public class Podcast extends Media {
     private String host;
     private String topic;
     private Artist subtitles;

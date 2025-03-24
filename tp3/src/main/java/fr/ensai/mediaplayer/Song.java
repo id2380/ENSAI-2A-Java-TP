@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 /**
  * Represents a song with essential attributes.
  */
-public class Song extends Audio {
+public class Song extends Media {
     private Artist singer;
     private String lyrics;
     private Artist author;

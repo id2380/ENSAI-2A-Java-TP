@@ -1,22 +1,22 @@
 package fr.ensai.mediaplayer;
 
 /**
- * Abstract class for audios and podcasts
+ * Abstract class for Medias and podcasts
  */
-public abstract class Audio{
+public abstract class Media{
     // Attributes
     protected String title;
     protected int year;
     protected int duration;
 
     /**
-     * Constructs a new Audio object.
+     * Constructs a new Media object.
      *
-     * @param title    The title of the audio.
-     * @param year     The year the audio was released.
-     * @param duration The duration of the audio in seconds.
+     * @param title    The title of the Media.
+     * @param year     The year the Media was released.
+     * @param duration The duration of the Media in seconds.
      */
-    public Audio(String title, int year, int duration){
+    public Media(String title, int year, int duration){
         this.title = title;
         this.year = year;
         this.duration = duration;
