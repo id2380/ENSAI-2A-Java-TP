@@ -1,14 +1,15 @@
 package fr.ensai.mediaplayer;
 
+// 10 genres chosen
 public enum Genre {
-    Pop,
-    Rock,
-    Electro,
-    Rap,
-    Classique,
-    Jazz,
-    Blues, 
-    Reggae,
-    Country,
-    Chanson française
+    POP,
+    ROCK,
+    ELECTRO,
+    RAP,
+    CLASSIQUE,
+    JAZZ,
+    BLUES, 
+    REGGAE,
+    COUNTRY,
+    CHANSON_FRANCAISE
 }

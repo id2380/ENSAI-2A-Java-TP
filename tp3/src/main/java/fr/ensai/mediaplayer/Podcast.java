@@ -44,7 +44,7 @@ public class Podcast extends Media {
         try {
             // Extract list of words from subtitles
             Stream<String> textStream = Stream.of(subtitles.split(" ")).collect(Collectors.toList());
-            for(Stream<String> text : textStream){
+            for(String text : textStream){
                  System.out.print(text);
                  Thread.sleep(100);
             }

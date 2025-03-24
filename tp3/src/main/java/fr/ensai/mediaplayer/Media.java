@@ -22,6 +22,11 @@ public abstract class Media{
         this.duration = duration;
     }
 
+    // return the duration of the media
+    public Item getDuration() {
+        return this.duration;
+    }
+
     public abstract String toString(); // abstract method to be implemented in subsclasses
 
     public abstract String equals(); // abstract method to be implemented in subsclasses
