@@ -8,7 +8,6 @@ public class Artist {
     private String lastName;
     private String nationality;
 
-
     /**
      * Constructs a new Artist object.
      *
@@ -27,6 +26,19 @@ public class Artist {
      */
     @Override
     public String toString() {
-        return "Artist " + this.firstName + " by " + this.lastName;
+        return "Artist " + this.firstName + " " + this.lastName;
+    }
+
+    // Getters
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getNationality() {
+        return nationality;
     }
  

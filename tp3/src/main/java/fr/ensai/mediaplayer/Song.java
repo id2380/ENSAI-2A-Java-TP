@@ -2,6 +2,10 @@ package fr.ensai.mediaplayer;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Objects;
+
 
 /**
  * Represents a song with essential attributes.
@@ -32,7 +36,7 @@ public class Song extends Media {
             Artist author, 
             Artist composer,
             List<Genre> genres) {
-        super(String title, int year, int duration);
+        super(title, year, duration);
         this.singer = singer;
         this.lyrics = lyrics;
         this.author = author;
@@ -77,12 +81,12 @@ public class Song extends Media {
     public void play() {
         try {
             // Extract list of words from lyrics
-            Stream<String> textStream = Stream.of(lyrics.split(" ")).collect(Collectors.toList());
-            for(Stream<String> text : textStream){
-                 System.out.print(text);
+            String[] words = lyrics.split(" ");
+            for(String word : words){
+                 System.out.print(word + " ");
                  Thread.sleep(100);
             }
-        }
+            System.out.println(); 
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Thread was interrupted");

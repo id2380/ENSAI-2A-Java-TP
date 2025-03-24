@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class Podcast extends Media {
     private String host;
     private String topic;
-    private Artist subtitles;
+    private String subtitles;
 
     /**
      * Constructs a new Podcast object.
@@ -21,7 +21,7 @@ public class Podcast extends Media {
      * @param subtitles   The subtitles of the podcast.
      */
     public Podcast(String title, String host, String topic, int duration, int year, String subtitles) {
-        super(String title, int year, int duration);
+        super(title, year, duration);
         this.host = host;
         this.topic = topic;
         this.subtitles = subtitles;
@@ -43,12 +43,11 @@ public class Podcast extends Media {
     public void play() {
         try {
             // Extract list of words from subtitles
-            Stream<String> textStream = Stream.of(subtitles.split(" ")).collect(Collectors.toList());
-            for(String text : textStream){
-                 System.out.print(text);
-                 Thread.sleep(100);
+            String[] words = subtitles.split(" ");
+            for (String word : words) {
+                System.out.print(word + " ");
+                Thread.sleep(100);
             }
-        }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             System.err.println("Thread was interrupted");
