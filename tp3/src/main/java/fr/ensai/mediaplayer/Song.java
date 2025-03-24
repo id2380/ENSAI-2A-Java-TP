@@ -11,6 +11,7 @@ public class Song extends Audio {
     private String lyrics;
     private Artist author;
     private Artist composer;
+    private List<Genre> genres = new ArrayList<>();
 
     /**
      * Constructs a new Song object.
@@ -22,12 +23,21 @@ public class Song extends Audio {
      * @param author   The author of the song.
      * @param composer The composer of the song.
      */
-    public Song(String title, Artist singer, int year, int duration, String lyrics, Artist author, Artist composer) {
+    public Song(
+            String title, 
+            Artist singer, 
+            int year, 
+            int duration, 
+            String lyrics, 
+            Artist author, 
+            Artist composer,
+            List<Genre> genres) {
         super(String title, int year, int duration);
         this.singer = singer;
         this.lyrics = lyrics;
         this.author = author;
         this.composer = composer;
+        this.genres = genres;
     }
 
     /**

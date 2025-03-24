@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+
          // Create artist and song
         Artist jeanFerrat = new Artist("Jean", "Ferrat", "Française");
         Song laMontage = new Song(
@@ -20,7 +21,8 @@ public class Main {
             Mais ils savaient tous à propos
             Tuer la caille ou le perdreau et manger la tomme de chèvre", //lyrics
             jeanFerrat, // author
-            jeanFerrat); // composer
+            jeanFerrat, // composer
+            List.of("Chanson française")); // genre
 
         // Play the song
         laMontage.play();
