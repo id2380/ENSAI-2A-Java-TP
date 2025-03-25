@@ -53,9 +53,9 @@ public class Main {
            3540, // duration
            2025, // year
            "Nous sommes à un tournant affirme l'économiste Jézabel Couppey-Soubeyran, " +
-            "c'est vraiment une crise existentielle et l'Union est à la croisée des chemins. " +
-            "Il s'agit de savoir si l'Europe continue de fonctionner en ordre dispersé et subit, " +
-            "ou si véritablement elle parvient à s'unir et à changer son logiciel."// subtitles
+           "c'est vraiment une crise existentielle et l'Union est à la croisée des chemins. " +
+           "Il s'agit de savoir si l'Europe continue de fonctionner en ordre dispersé et subit, " +
+           "ou si véritablement elle parvient à s'unir et à changer son logiciel."// subtitles
         );
 
         // Create a new playlist

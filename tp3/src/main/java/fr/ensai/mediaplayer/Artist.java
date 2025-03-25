@@ -41,4 +41,4 @@ public class Artist {
     public String getNationality() {
         return nationality;
     }
- 
+}
