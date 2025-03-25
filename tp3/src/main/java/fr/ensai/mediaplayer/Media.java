@@ -24,7 +24,7 @@ public abstract class Media{
 
     public abstract String toString(); // abstract method to be implemented in subsclasses
 
-    public abstract void play() ; // abstract method to be implemented in subsclasses
+    public abstract void play(); // abstract method to be implemented in subsclasses
 
     // Getters
     public String getTitle() {

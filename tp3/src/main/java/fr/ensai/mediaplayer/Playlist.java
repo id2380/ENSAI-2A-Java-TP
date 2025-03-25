@@ -17,7 +17,7 @@ public class Playlist {
      * @param name  The name of the playlist.
      */
     public Playlist(String name) {
-        this.name = name ;
+        this.name = name;
     }
 
     /**
@@ -59,8 +59,8 @@ public class Playlist {
      */ 
     public void removeMedia(int i) {
         if (i >= 0 && i < mediaList.size()) {
-            totalDuration -= mediaList.get(i).getDuration() ;
-            mediaList.remove(i) ;
+            totalDuration -= mediaList.get(i).getDuration();
+            mediaList.remove(i);
         }
     }
 
