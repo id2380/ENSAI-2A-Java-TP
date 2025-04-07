@@ -37,12 +37,12 @@
                     <td>
                         <div class="row">
                             <div class="col-md-6">
-                                <a th:href="@{/competition/{id}/athletes(id=${c.id})}"
-                                    class="btn btn-primary btn-block">Athletes</a>
+                                <a th:href="@{/competition/{id}/athletes(id=${c.idCompetition})}"
+                                   class="btn btn-primary btn-block">Athletes</a>
                             </div>
                             <div class="col-md-6">
-                                <a th:href="@{/competition/delete/{id}(id=${c.id})}"
-                                    class="btn btn-danger btn-block">Delete</a>
+                                <a th:href="@{/competition/delete/{id}(id=${c.idCompetition})}"
+                                   class="btn btn-danger btn-block">Delete</a>
                             </div>
                         </div>
                     </td>
